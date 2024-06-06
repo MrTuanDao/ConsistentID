@@ -65,7 +65,7 @@ class ConsistentIDStableDiffusionPipeline(StableDiffusionPipeline):
         ### BiSeNet
         self.bise_net = BiSeNet(n_classes = 19)
         self.bise_net.cuda()
-        self.bise_net_cp='face_parsing.pth' 
+        self.bise_net_cp='./face_parsing.pth' 
         self.bise_net.load_state_dict(torch.load(self.bise_net_cp))
         self.bise_net.eval()
         # Colors for all 20 parts
