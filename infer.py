@@ -15,8 +15,6 @@ consistentID_path = "JackAILab/ConsistentID/ConsistentID-v1.bin"
 pipe = ConsistentIDStableDiffusionPipeline.from_pretrained(
     base_model_path, 
     torch_dtype=torch.float16, 
-    use_safetensors=True, 
-    variant="fp16"
 ).to(device)
 
 ### Load consistentID_model checkpoint
